@@ -1,0 +1,5 @@
+.env
+src/sample_docs/
+.venv/
+__pycache__/
+src/faiss_index/
