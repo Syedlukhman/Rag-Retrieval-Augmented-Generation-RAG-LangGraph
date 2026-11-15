@@ -39,18 +39,22 @@ User prompt
 ## Project Structure
 
 ```
-.
-├── agent.py          # LangGraph agent definition (state, tools, graph)
-├── app.py            # Streamlit UI
-├── ingest.py         # One-time script to build the FAISS index
-├── main.py           # CLI entrypoint placeholder
-├── sample_docs/      # Source .txt documents for the knowledge base
-│   └── ai_concepts.txt
-├── faiss_index/      # Generated FAISS index (created by ingest.py)
-├── pyproject.toml
-└── .env.example
+Rag-Retrieval-Augmented-Generation-RAG-LangGraph/
+├── src/
+│   ├── agent.py            # LangGraph agent: Groq LLM + tools (search_docs, add, multiply, divide)
+│   ├── app.py              # Streamlit chat UI for the agent
+│   ├── ingest.py           # Builds the FAISS vector index from sample_docs/
+│   ├── main.py             # Simple entry point
+│   ├── experiments.ipynb   # Notebook used for prototyping
+│   ├── sample_docs/        # Source .txt documents (not in repo)
+│   └── faiss_index/        # Generated vector index (not in repo)
+├── .env                    # API keys (not in repo)
+├── .gitignore
+├── .python-version
+├── pyproject.toml          # Project dependencies (uv)
+├── uv.lock
+└── README.md
 ```
-
 ## Setup
 
 ### Prerequisites
